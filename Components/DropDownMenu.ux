@@ -7,28 +7,6 @@
 	<Brush ux:Property="BackgroundColor" />
 	<Brush ux:Property="BorderColor" />
 	<float ux:Property="FontSize" />
-
-
-	<!--
-	<JavaScript>
-	var Observable = require('FuseJS/Observable');
-
-	var selected = Observable();
-
-	function onSelected(arg) {
-		if(arg.data){
-		selected.value = arg.data.name;
-		}
-	}
-
-	module.exports = {
-		selected: selected,
-		onSelected: onSelected
-	}
-	</JavaScript>
-	-->
-
-
 	<!-- THE LIST PANEL (when dropdown is open) -->
 	<Panel ux:Class="DropdownOption" ux:Name="self" Height="30" >
 		<string ux:Property="Text" />

@@ -1,11 +1,14 @@
 {
-  "RootNamespace":"GstCalculator",
-  "Title":"GSTCalculator",
+  "RootNamespace":"com.gstcalculator",
+  "Title":"GstCalculator",
+  "Title":"GstCalculator",
   "Packages": [
     "Fuse",
     "FuseJS",
     "Fuse.Maps",
-    "Fuse.Scripting"
+    "Fuse.Scripting",
+    "Fuse.iOS",
+    "Fuse.Android"
   ],
  "Projects": [
     "Firebase/Firebase/Firebase.unoproj",
@@ -21,9 +24,14 @@
     ]
   },
   "Android": {
-  "Geo": {
-    "ApiKey": "AIzaSyDj1qyAYJSuxQk_ZdUGUES7JVpsXJzZ3wk"
-      }
+    "Package" : "com.gstcalculator.android",
+    "Geo": {
+      "ApiKey": "AIzaSyDj1qyAYJSuxQk_ZdUGUES7JVpsXJzZ3wk"
+        }
+  },
+  "iOS": {
+    "BundleIdentifier": "$(RootNamespace)",
+    "BundleName": "$(Name)", 
   }
 }
 

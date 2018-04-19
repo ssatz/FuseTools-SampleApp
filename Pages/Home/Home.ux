@@ -1,9 +1,77 @@
 <Page ux:Class="Home" Title="Home">
-	<Text Alignment="Center" Value="Home"/>
 	<NativeViewHost>
         <Firebase.AdMob.GADBannerView Height="90" AdUnitId="ca-app-pub-3940256099942544/6300978111" />
   </NativeViewHost>
-    <Title>
+  <Title>
 		<ResourceString Key="Title" Value="Home"/>
 	</Title>
+	<DockPanel Height="350" Alignment="Top">
+		<Panel Alignment="Top" HitTestMode="None">
+			<StatusBarBackground Dock="Top"/>
+			<Rectangle Height="300%" MaxHeight="10000000">
+				<LinearGradient>
+					<GradientStop Offset="0" Color="#FFFD"/>
+					<GradientStop Offset="0.33" Color="#FFFD"/>
+					<GradientStop Offset="1" Color="#0000"/>
+				</LinearGradient>
+			</Rectangle>
+		</Panel>
+		<Text ux:Class="SliderHeader" Font="RobotoMedium" FontSize="23" Color="#222" Margin="0,0,0,15" />
+		<Text ux:Class="SliderBody" Font="RobotRegular" FontSize="17" Color="#555" TextWrapping="Wrap" />
+
+		<Image ux:Class="BackgroundImage" StretchMode="UniformToFill" />
+
+		<DockPanel>
+			<PageControl ux:Name="slides" ClipToBounds="true">
+
+				<StackPanel ux:Class="Info" ux:Name="self" Padding="18" Alignment="Bottom" Background="#fff">
+					<Shadow Color="#0002" Size="30" Angle="-90" Distance="8" />
+
+					<WhileTrue ux:Name="slideOut" Value="true">
+						<Move Y="150" Duration="0.5" Easing="CubicIn" />
+						<Change self.Opacity="0.0" Duration="0.5" Easing="CircularIn" />
+					</WhileTrue>
+
+					<ActivatingAnimation>
+						<Change slideOut.Value="false" />
+					</ActivatingAnimation>
+				</StackPanel>
+
+				<Page>
+					<Info>
+						<SliderHeader>Juicer be juiciiiier!</SliderHeader>
+						<SliderBody>Look at that thing. It takes fruit and vegetables and turns it into juice. It's like magic.</SliderBody>
+					</Info>
+					<BackgroundImage File="../../Assets/page_1.jpg" />
+				</Page>
+				<Page>
+					<Info>
+						<SliderHeader>Juicer be juiciiiier!</SliderHeader>
+						<SliderBody>Look at that thing. It takes fruit and vegetables and turns it into juice. It's like magic.</SliderBody>
+					</Info>
+					<BackgroundImage File="../../Assets/page_1.jpg" />
+				</Page>
+				<Page>
+					<Info>
+						<SliderHeader>Juicer be juiciiiier!</SliderHeader>
+						<SliderBody>Look at that thing. It takes fruit and vegetables and turns it into juice. It's like magic.</SliderBody>
+					</Info>
+					<BackgroundImage File="../../Assets/page_1.jpg" />
+				</Page>
+			</PageControl>
+			<PageIndicator Dock="Bottom" Alignment="Center" Margin="5" Navigation="slides">
+				<Circle ux:Template="Dot" Width="10" Height="10"  Margin="4">
+					<SolidColor ux:Name="dotStrokeBody" Color="#0000" />
+					<Stroke ux:Name="dotStroke" Width="2">
+						<SolidColor ux:Name="dotStrokeColor" Color="#bbb" />
+					</Stroke>
+					<ActivatingAnimation>
+						<Change dotStrokeBody.Color="#aaa" />
+						<Change dotStrokeColor.Color="#aaa" />
+					</ActivatingAnimation>
+				</Circle>
+			</PageIndicator>
+		</DockPanel>
+		<BottomBarBackground Dock="Bottom" />
+	</DockPanel>
 </Page>

@@ -3,13 +3,15 @@
 		<ResourceString Key="Title" Value="About Us"/>
 	</Title>
 	<StackPanel>
-	<Rectangle CornerRadius="4" Color="White" Margin="10,10,10,0" Height="100">
+	<Rectangle CornerRadius="4" Color="White"  Height="350">
 		<NativeViewHost>
 			<MapView Latitude="59.911567" Longitude="10.741030" Zoom="10">
-				<MapMarker Latitude="59.911567" Longitude="10.741030" Label="Fuse HQ"/>
+				<DropShadow/>
+				<Text Value="We are Located here!"/>
+				<MapMarker Latitude="59.911567" Longitude="10.741030" Label="Optimo Technologies">
+				</MapMarker>
 			</MapView>
 		</NativeViewHost>
-		<DropShadow/>
 	</Rectangle>
 	</StackPanel>
 </Page>
