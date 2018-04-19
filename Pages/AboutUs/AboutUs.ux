@@ -1,0 +1,15 @@
+<Page ux:Class="AboutUs" Title="About Us">
+    <Title>
+		<ResourceString Key="Title" Value="About Us"/>
+	</Title>
+	<StackPanel>
+	<Rectangle CornerRadius="4" Color="White" Margin="10,10,10,0" Height="100">
+		<NativeViewHost>
+			<MapView Latitude="59.911567" Longitude="10.741030" Zoom="10">
+				<MapMarker Latitude="59.911567" Longitude="10.741030" Label="Fuse HQ"/>
+			</MapView>
+		</NativeViewHost>
+		<DropShadow/>
+	</Rectangle>
+	</StackPanel>
+</Page>

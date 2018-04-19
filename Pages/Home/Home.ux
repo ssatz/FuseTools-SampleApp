@@ -1,0 +1,9 @@
+<Page ux:Class="Home" Title="Home">
+	<Text Alignment="Center" Value="Home"/>
+	<NativeViewHost>
+        <Firebase.AdMob.GADBannerView Height="90" AdUnitId="ca-app-pub-3940256099942544/6300978111" />
+  </NativeViewHost>
+    <Title>
+		<ResourceString Key="Title" Value="Home"/>
+	</Title>
+</Page>

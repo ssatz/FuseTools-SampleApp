@@ -1,0 +1,46 @@
+{
+    "project_info": {
+      "project_number": "178363868680",
+      "firebase_url": "https://api-project-178363868680.firebaseio.com",
+      "project_id": "api-project-178363868680",
+      "storage_bucket": "api-project-178363868680.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:178363868680:android:eca2cb92f7406c23",
+          "android_client_info": {
+            "package_name": "com.gstcalculator.android"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "178363868680-ou1opovepq3ljt3ljfuq1i16erg5q03d.apps.googleusercontent.com",
+            "client_type": 3
+          },
+          {
+            "client_id": "178363868680.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyBU5HeaEOnX78SLi1qMQ6MQzyTFFEH-L1I"
+          }
+        ],
+        "services": {
+          "analytics_service": {
+            "status": 1
+          },
+          "appinvite_service": {
+            "status": 1,
+            "other_platform_oauth_client": []
+          },
+          "ads_service": {
+            "status": 2
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

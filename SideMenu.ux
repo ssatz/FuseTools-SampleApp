@@ -1,0 +1,35 @@
+<DockPanel Color="White" ux:Class="SideMenu">
+	<Router ux:Dependency="router"/>
+	
+	<JavaScript>
+		exports.gotoGst = function() {
+			router.push( "gstCalculation" )
+		}
+        exports.gotoAboutUs = function() {
+			router.push( "aboutUs" )
+		}
+	</JavaScript>
+	
+	<!-- logo / app name -->
+	<Panel Dock="Top">
+		<Text Value="GST Calculation" Alignment="Center" Margin="0,10,0,10" FontSize="30"/>
+	</Panel>
+
+	<Panel ux:Class="MenuItem" HitTestMode="LocalBounds">
+		<string ux:Property="Icon"/>
+		<string ux:Property="Label"/>
+		<object ux:Property="Handler"/>
+		
+		<Text Alignment="CenterLeft" Width="32" Margin="4,0" Value="{Property this.Icon}"
+			Font="MaterialIcons"  FontSize="32"/>
+		<Text Alignment="CenterLeft" Margin="40,0,10,0"  Value="{Property this.Label}"/>
+		<Clicked Handler="{Property this.Handler}">
+			<RaiseUserEvent EventName="dismissMenu"/>
+		</Clicked>
+	</Panel>
+	
+	<StackPanel ItemSpacing="5" Margin="30,30,30,30">
+		<MenuItem Icon="&#xE7FD;" Label="GST Calculation" Handler="{gotoGst}"/>
+        <MenuItem Icon="&#xE7FD;" Label="About US" Handler="{gotoAboutUs}"/>
+	</StackPanel>
+</DockPanel>

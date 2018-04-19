@@ -1,0 +1,11 @@
+<Rectangle ux:Class="GSTButton" HitTestMode="LocalBounds" Margin="4" Color="#25a" CornerRadius="4">
+    <DropShadow/>
+    <string ux:Property="Text" />
+    <object ux:Property="Clicked" />
+    <Text Value="{ReadProperty Text}" Font="Bold" ux:Name="buttonText"  Color="#fff" Alignment="Center" Margin="30,15" />
+    <WhilePressed>
+        <Scale Target="buttonText" Factor="0.9" Duration="0.05" DurationBack=".4"/>
+        <Callback Handler="{ReadProperty Clicked}"/>
+        <Change this.Color="#138" Duration="0.05" DurationBack=".4" />
+    </WhilePressed>
+</Rectangle>

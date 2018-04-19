@@ -1,0 +1,29 @@
+{
+  "RootNamespace":"GstCalculator",
+  "Title":"GSTCalculator",
+  "Packages": [
+    "Fuse",
+    "FuseJS",
+    "Fuse.Maps",
+    "Fuse.Scripting"
+  ],
+ "Projects": [
+    "Firebase/Firebase/Firebase.unoproj",
+    "Firebase/Firebase.AdMob/Firebase.AdMob.unoproj"
+  ],
+  "Includes": [
+    "*",
+    "GoogleService-Info.plist:ObjCSource:iOS"
+  ],
+  "AdMob": {
+    "TestDevices": [
+      "648F2582C7B37F0EBEB4DA80843A5583"
+    ]
+  },
+  "Android": {
+  "Geo": {
+    "ApiKey": "AIzaSyDj1qyAYJSuxQk_ZdUGUES7JVpsXJzZ3wk"
+      }
+  }
+}
+

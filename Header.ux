@@ -1,0 +1,42 @@
+<DockPanel ux:Class="Header">
+	<Router ux:Dependency="router"/>
+	<!-- 
+		The title is partially static and dynamic:
+		
+			- The Menu or Back button is on all pages and in the code here
+			- Each page will use `TitleAreaContent` to add a title, or other controls into this panel.
+	-->
+	<Panel Dock="Top" ux:Name="titleArea" Height="50"  Color="PrimaryColor">
+	<DropShadow/>
+		<!-- Include Back or Menu navigation -->
+		<Panel Alignment="Left" Padding="5,0" HitTestMode="LocalBounds" Navigation="router">
+			<WhileCanGoBack>
+				<Text Value="&#xE5C4;" Alignment="Center" Color="IconColor" Font="MaterialIcons" FontSize="28"/>
+				<Clicked>
+					<GoBack/>
+				</Clicked>
+			</WhileCanGoBack>
+			<WhileCanGoBack Invert="true">
+				<Text Value="&#xE5D2;" Alignment="Center" Color="IconColor" Font="MaterialIcons" FontSize="28"/>
+				<Clicked>
+					<RaiseUserEvent EventName="requestMenu"/>
+				</Clicked>
+			</WhileCanGoBack>
+		</Panel>
+	</Panel>
+	<!-- The `TitleAreaContent` finds the panel via a resource binding -->
+	<ResourceObject Key="titleArea" Value="titleArea"/>
+
+	<!-- 
+		Two levels of navigation are used. 
+		
+		The "home" path contains the bottom action bar to quickly navigate between top-level sections. Any page that wishes to have this action bar should reside inside "home".
+		
+		The other pages will not have this action bar, but will still have the common titleArea.
+	-->
+	<Navigator DefaultPath="home">
+        <Home ux:Template="home"/>
+		<GstCalculation ux:Template="gstCalculation"/>
+        <AboutUs ux:Template="aboutUs"/>
+	</Navigator>
+</DockPanel>

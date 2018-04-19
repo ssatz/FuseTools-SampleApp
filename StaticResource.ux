@@ -1,0 +1,11 @@
+<Panel ux:Class="StaticResources">
+	<Font ux:Global="RobotoMedium" File="Assets/Roboto-Medium.ttf" />
+    <Font File="Assets/MaterialIcons-Regular.ttf" ux:Global="MaterialIcons"/>
+	<float4 ux:Global="PrimaryColor" ux:Value="#25a" />
+	<float4 ux:Global="AccentColor" ux:Value="#E91E63" />
+    <float4 ux:Global="IconColor" ux:Value="#FFFFFF" />
+	
+	<Text ux:Class="SmallHeaderText" Font="RobotoMedium" FontSize="17" Color="PrimaryColor" Margin="0,15,0,0" />
+	<Text ux:Class="BodyText" FontSize="14" Color="#263238" TextWrapping="Wrap" />
+	<BodyText ux:Class="MutedText" Color="#888" />
+</Panel>

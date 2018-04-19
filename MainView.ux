@@ -1,0 +1,31 @@
+<App Background="#eee">
+<Router ux:Name="router"/>
+<ClientPanel>
+    <JavaScript>
+			exports.dismissMenu = function() {
+				edge.dismiss()
+			}
+		</JavaScript>
+        <!-- An event that opens the left edge menu -->
+		<UserEvent ux:Name="requestMenu"/>
+		<OnUserEvent EventName="requestMenu">
+			<Set edge.Active="menu"/>
+		</OnUserEvent>
+		
+		<UserEvent ux:Name="dismissMenu"/>
+		<OnUserEvent EventName="dismissMenu" Handler="{dismissMenu}"/>
+        <EdgeNavigator ux:Name="edge">
+			<SideMenu Edge="Left" ux:Name="menu" router="router">
+				<ActivatingAnimation>
+					<Change block.Visibility="Visible"/>
+					<Change block.Color="#0005"/>
+				</ActivatingAnimation>
+			</SideMenu>
+			<Panel>
+				<Rectangle Layer="Overlay" Visibility="Collapsed" Color="#0000" ux:Name="block"/>
+				<Header router="router"/>
+			</Panel>
+		</EdgeNavigator>
+</ClientPanel>
+
+</App>

@@ -1,0 +1,17 @@
+build/Local/Designer/cache/ux14/Header.g.uno
+build/Local/Designer/cache/ux14/MainView.g.uno
+build/Local/Designer/cache/ux14/SideMenu.g.uno
+build/Local/Designer/cache/ux14/MenuItem.g.uno
+build/Local/Designer/cache/ux14/StaticResources.g.uno
+build/Local/Designer/cache/ux14/SmallHeaderText.g.uno
+build/Local/Designer/cache/ux14/BodyText.g.uno
+build/Local/Designer/cache/ux14/MutedText.g.uno
+build/Local/Designer/cache/ux14/GSTButton.g.uno
+build/Local/Designer/cache/ux14/DropdownMenu.g.uno
+build/Local/Designer/cache/ux14/DropdownOption.g.uno
+build/Local/Designer/cache/ux14/Title.g.uno
+build/Local/Designer/cache/ux14/AboutUs.g.uno
+build/Local/Designer/cache/ux14/GstCalculation.g.uno
+build/Local/Designer/cache/ux14/TitleText.g.uno
+build/Local/Designer/cache/ux14/Home.g.uno
+build/Local/Designer/cache/ux14/GstCalculator.unoproj.g.uno

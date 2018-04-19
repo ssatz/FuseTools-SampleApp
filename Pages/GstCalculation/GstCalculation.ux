@@ -1,0 +1,47 @@
+<Page ux:Class="GstCalculation" Title="Calculte GST">
+<JavaScript File="GstCalculation.js" />
+	<Title>
+		<ResourceString Key="Title" Value="Calculate Your GST"/>
+	</Title>
+	<!-- Reset the  form while performming navigation  -->
+	<WhileNavigating>
+		<Callback Handler={reset}/>
+	</WhileNavigating>
+	<DockPanel>
+		<ScrollView>
+			<StackPanel ItemSpacing="10" Padding="10">
+				<Text ux:Class="TitleText" Opacity=".6" Margin="0,0,0,5" />
+
+				<StackPanel>
+					<TitleText Font="Bold">Total Value of interstate sales(Between States):</TitleText>
+					<Rectangle Color="IconColor">
+					<TextBox Value="{interStates}"  IsFocusable="true"   InputHint="Decimal" Height="40"/>
+					</Rectangle>
+				</StackPanel>
+				<StackPanel>
+					<TitleText Font="Bold">Total Value of intrastate sales(Within State):</TitleText>
+					<Rectangle Color="IconColor">
+					<TextBox Value="{intraState}"  InputHint="Decimal" Height="40" />
+					</Rectangle>
+				</StackPanel>
+				<StackPanel>
+					<TitleText Font="Bold">GST Rate(in % ):</TitleText>
+					<DropdownMenu ux:Name="dropDown" ListItems="{items}" Selected="{gstRate}" Clicked="{onSelected}" BackgroundColor="#FDFDFD" BorderColor="#BFBFBF" />
+				</StackPanel>
+				<StackPanel>
+					<TitleText Font="Bold">GST Inclusive?</TitleText>
+					<NativeViewHost>
+        				<Switch  ux:Name="gstInclusiveSwitch" Value={isGstInclusive}>
+						</Switch>
+    				</NativeViewHost>
+				</StackPanel>
+				<StackPanel>
+					<Grid ColumnCount="2" Dock="Bottom">
+						<GSTButton Text="Reset" Clicked="{reset}" />
+						<GSTButton Text="Calculate" Clicked="{calculate}" />
+					</Grid>
+				</StackPanel>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Page>
