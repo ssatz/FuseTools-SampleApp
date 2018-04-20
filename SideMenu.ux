@@ -1,6 +1,5 @@
-<DockPanel Color="White" ux:Class="SideMenu">
+<DockPanel Color="White" ux:Class="SideMenu" ux:Name="sideMenu">
 	<Router ux:Dependency="router"/>
-	
 	<JavaScript>
 		exports.gotoGst = function() {
 			router.push( "gstCalculation" )

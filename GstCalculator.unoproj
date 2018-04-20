@@ -1,14 +1,11 @@
 {
   "RootNamespace":"com.gstcalculator",
   "Title":"GstCalculator",
-  "Title":"GstCalculator",
+  "Name":"GstCalculator",
   "Packages": [
     "Fuse",
     "FuseJS",
-    "Fuse.Maps",
-    "Fuse.Scripting",
-    "Fuse.iOS",
-    "Fuse.Android"
+    "Fuse.Maps"
   ],
  "Projects": [
     "Firebase/Firebase/Firebase.unoproj",
@@ -16,6 +13,7 @@
   ],
   "Includes": [
     "*",
+     "HomeScreen.uno",
     "GoogleService-Info.plist:ObjCSource:iOS"
   ],
   "AdMob": {
@@ -30,8 +28,9 @@
         }
   },
   "iOS": {
-    "BundleIdentifier": "$(RootNamespace)",
+    "BundleIdentifier": "com.gstcalculator.ios",
     "BundleName": "$(Name)", 
+    "DeploymentTarget": "8.0"
   }
 }
 

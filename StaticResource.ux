@@ -1,6 +1,6 @@
 <Panel ux:Class="StaticResources">
 	<Font ux:Global="RobotoMedium" File="Assets/Roboto-Medium.ttf" />
-	<Font File="Assets/Roboto-Regular.ttf" ux:Global="RobotRegular" />
+	<Font File="Assets/Roboto-Regular.ttf" ux:Global="RobotoRegular" />
     <Font File="Assets/MaterialIcons-Regular.ttf" ux:Global="MaterialIcons"/>
 	<float4 ux:Global="PrimaryColor" ux:Value="#25a" />
 	<float4 ux:Global="AccentColor" ux:Value="#E91E63" />

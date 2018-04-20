@@ -1,0 +1,15 @@
+<Panel ux:Class="Toast" Layer="Overlay">
+	<string ux:Property="Text" />
+    <bool ux:Property="Visible" />
+       <WhileTrue Value="{ReadProperty Visible}">
+         <ActivatingAnimation>
+            <DropShadow/>
+            <BringToFront Target="btn"/>
+            <Change btn.Visibility="Visible" Delay="0" DelayBack="0.26" />
+            <Change btn.Opacity="0.6" Duration="0.36" />   
+         </ActivatingAnimation>   
+	    </WhileTrue>
+	    <Rectangle ux:Name="btn"  Visibility="Collapsed" Opacity="0"  Height="36" CornerRadius="20" Color="#323232" Padding="16,0" Margin="16">
+			<Text Value="{Property this.Text}" Font="RobotoRegular" Color="#FFFFFF" FontSize="14"  Alignment="CenterLeft"/>
+		</Rectangle> 
+</Panel>

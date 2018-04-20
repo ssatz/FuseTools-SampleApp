@@ -5,8 +5,11 @@
 	<StackPanel>
 	<Rectangle CornerRadius="4" Color="White"  Height="350">
 		<NativeViewHost>
-			<MapView Latitude="59.911567" Longitude="10.741030" Zoom="10">
-				<DropShadow/>
+			<MapView Latitude="59.911567" Longitude="10.741030" Zoom="2" ux:Name="map" ShowMyLocation="True">
+				<ActivatingAnimation>
+					<Change Easing="QuadraticInOut" Delay="1" Duration="2" map.Zoom="12"/>
+					<Change map.Tilt ="180"/>
+				</ActivatingAnimation>
 				<Text Value="We are Located here!"/>
 				<MapMarker Latitude="59.911567" Longitude="10.741030" Label="Optimo Technologies">
 				</MapMarker>

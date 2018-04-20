@@ -1,7 +1,4 @@
 <Page ux:Class="Home" Title="Home">
-	<NativeViewHost>
-        <Firebase.AdMob.GADBannerView Height="90" AdUnitId="ca-app-pub-3940256099942544/6300978111" />
-  </NativeViewHost>
   <Title>
 		<ResourceString Key="Title" Value="Home"/>
 	</Title>
@@ -17,7 +14,7 @@
 			</Rectangle>
 		</Panel>
 		<Text ux:Class="SliderHeader" Font="RobotoMedium" FontSize="23" Color="#222" Margin="0,0,0,15" />
-		<Text ux:Class="SliderBody" Font="RobotRegular" FontSize="17" Color="#555" TextWrapping="Wrap" />
+		<Text ux:Class="SliderBody" Font="RobotoRegular" FontSize="17" Color="#555" TextWrapping="Wrap" />
 
 		<Image ux:Class="BackgroundImage" StretchMode="UniformToFill" />
 
@@ -71,6 +68,13 @@
 					</ActivatingAnimation>
 				</Circle>
 			</PageIndicator>
+		</DockPanel>
+		<DockPanel Dock="Bottom">  
+			<NativeViewHost>
+			   <WhileActive>
+        			<Firebase.AdMob.GADBannerView  AdUnitId="ca-app-pub-3940256099942544/6300978111" />
+				</WhileActive>
+  			</NativeViewHost>
 		</DockPanel>
 		<BottomBarBackground Dock="Bottom" />
 	</DockPanel>

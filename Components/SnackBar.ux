@@ -1,0 +1,15 @@
+<Panel ux:Class="Snackbar">
+
+	<string ux:Property="Text" />
+	<string ux:Property="BtnText" />
+	<float4 ux:Property="BtnTextColor" />
+
+	<Rectangle ux:Name="snack" Width="100%" Height="48" Color="#323232">
+		<Text Value="{Property this.Text}" Dock="Left" Font="RobotoRegular" FontSize="14" Color="#FFFFFF" Margin="24,14"/>
+		<Text Value="{Property this.BtnText}" Font="RobotoMedium" Color="{Property this.BtnTextColor}" FontSize="14"  Alignment="CenterRight" Margin="24,14">
+			<Clicked>
+			</Clicked>
+		</Text>
+	</Rectangle>
+
+</Panel>

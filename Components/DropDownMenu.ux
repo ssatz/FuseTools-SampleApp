@@ -46,7 +46,6 @@
 		<DropdownSelectedItem TextColor="{ReadProperty menu.TextColor}" FontSize="{ReadProperty menu.FontSize}" Text="{ReadProperty menu.Selected}" BackgroundColor="{ReadProperty menu.BackgroundColor}" BorderColor="{ReadProperty menu.BorderColor}" />
 		<Clicked>
 			<Toggle Target="expandDropdown"/>
-			<BringToFront Target="dropDown" />
 		</Clicked>
 		<WhileTrue ux:Name="expandDropdown">
 			<StackPanel Offset="0,38" ux:Name="dropDown">
