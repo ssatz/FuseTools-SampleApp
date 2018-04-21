@@ -30,24 +30,5 @@
 	<StackPanel ItemSpacing="5" Margin="30,30,30,30">
 		<MenuItem Icon="&#xE7FD;" Label="GST Calculation" Handler="{gotoGst}"/>
         <MenuItem Icon="&#xE7FD;" Label="About US" Handler="{gotoAboutUs}"/>
-		<Panel>
-		<SocialButton ux:Global="SocialButton" />
-
-		<JavaScript>
-			var SocialButton = require("SocialButton");
-
-			function button_pressed() {
-				SocialButton.button();
-			}
-
-			module.exports = {
-				button_pressed: button_pressed
-			};
-		</JavaScript>
-
-		<StackPanel>
-			<Button Text="Share Our App" Clicked="{button_pressed}" />
-		</StackPanel>
-		</Panel>
 	</StackPanel>
 </DockPanel>
