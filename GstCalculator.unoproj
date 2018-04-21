@@ -13,7 +13,8 @@
   ],
   "Includes": [
     "*",
-     "HomeScreen.uno",
+    "HomeScreen.uno",
+    "RateApp.uno",
     "GoogleService-Info.plist:ObjCSource:iOS"
   ],
   "AdMob": {
@@ -30,7 +31,7 @@
   "iOS": {
     "BundleIdentifier": "com.gstcalculator.ios",
     "BundleName": "$(Name)", 
-    "DeploymentTarget": "8.0"
+    "DeploymentTarget": "11.0"
   }
 }
 
